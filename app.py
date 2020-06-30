@@ -42,7 +42,7 @@ def callback():
 def handle_message(event):
     if event.message.text == "勉強開始":
         start_times[event.source.user_id] = time.time()
-        line_bot_api.reply_message(
+        return line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text="計測を開始しました！"))
     if event.message.text == "勉強終了":
@@ -51,7 +51,7 @@ def handle_message(event):
         hour = elapsed_time // 3600
         minute = (elapsed_time % 3600) // 60
         second = elapsed_time % 60
-        line_bot_api.reply_message(
+        return line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=f"ただいまの勉強時間は{hour}時間{minute}分{second}秒です。お疲れ様でした！"))
 
