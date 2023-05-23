@@ -9,6 +9,6 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 line-bot-sdk==1.16.0
 MarkupSafe==1.1.1
-requests==2.24.0
+requests==2.31.0
 urllib3==1.26.5
 Werkzeug==2.2.3
